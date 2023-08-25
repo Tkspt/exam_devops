@@ -6,11 +6,11 @@ path = os.getcwd()
 directory_manager = DirectoryManager(path)
 git_manager = GitManager(path)
 
-files = ['requirements.txt', 'notebooks/main.ipynb', 'src/utils.py']
+# files = ['requirements.txt', 'notebooks/main.ipynb', 'src/utils.py']
 
-for file in files:
-    directory_manager.createFile(file)
+# for file in files:
+#     directory_manager.createFile(file)
 
 git_manager.add_into_local_repos()
-git_manager.add_commit('create files close #3')
+git_manager.add_commit('complete readme file close #4')
 git_manager.push_to_remote()
