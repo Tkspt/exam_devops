@@ -6,10 +6,11 @@ path = os.getcwd()
 directory_manager = DirectoryManager(path)
 git_manager = GitManager(path)
 
-second_level_folders = ["data/cleaned", "data/raw",]
+files = ['requirements.txt', 'notebooks/main.ipynb', 'src/utils.py']
 
-directory_manager.createEmptyDirectories(second_level_folders)
+for file in files:
+    directory_manager.createFile(file)
 
 git_manager.add_into_local_repos()
-git_manager.add_commit('create seconds level folders close #2')
+git_manager.add_commit('create files close #3')
 git_manager.push_to_remote()
